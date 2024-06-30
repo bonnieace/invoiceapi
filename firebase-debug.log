@@ -1,0 +1,44 @@
+[debug] [2024-06-16T13:27:43.701Z] ----------------------------------------------------------------------
+[debug] [2024-06-16T13:27:43.703Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\USER\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-06-16T13:27:43.704Z] CLI Version:   13.11.2
+[debug] [2024-06-16T13:27:43.704Z] Platform:      win32
+[debug] [2024-06-16T13:27:43.704Z] Node Version:  v18.17.1
+[debug] [2024-06-16T13:27:43.705Z] Time:          Sun Jun 16 2024 16:27:43 GMT+0300 (East Africa Time)
+[debug] [2024-06-16T13:27:43.705Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-06-16T13:27:43.714Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-06-16T13:27:43.715Z] > authorizing via signed-in user (bonniemasota@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\USER\Desktop\node\pdfinvoices\functions
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2024-06-16T13:28:17.395Z] > refreshing access token with scopes: []
+[debug] [2024-06-16T13:28:17.398Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-06-16T13:28:17.398Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-06-16T13:28:17.855Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-06-16T13:28:17.855Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-06-16T13:28:17.880Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2024-06-16T13:28:17.880Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"pdfapi","name":"pdfapi"}
+[debug] [2024-06-16T13:28:19.624Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 409
+[debug] [2024-06-16T13:28:19.625Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":409,"message":"Requested entity already exists","status":"ALREADY_EXISTS"}}
+[debug] [2024-06-16T13:28:19.979Z] FirebaseError: HTTP Error: 409, Requested entity already exists
+    at responseToError (C:\Users\USER\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\USER\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:305:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to create project because there is already a project with ID pdfapi. Please try again with a unique project ID.
